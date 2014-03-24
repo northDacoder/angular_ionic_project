@@ -1,0 +1,49 @@
+<!--
+  This template loads for the 'tab.developers' state (app.js)
+-->
+<ion-view title="Developers">
+  <ion-content has-header="true" has-tabs="true">
+    <div class="list list-inset">
+      
+      <ion-item ng-repeat="developer in developers" type="item-text-wrap" >
+          <img ng-src="media/images/{{ developer.screenshot }}">
+          <ul>
+              <li>{{ developer.name }}</li>
+              <li>{{ developer.city }}, {{ developer.state }}</li>
+              <li>{{ developer.description }}</li>
+              <button class="button button-success"><a href="mailto:{{ developer.email }}">Email</a></button>
+              <button class="button button-danger"><a href="{{ developer.github }}"></a></button>
+              <img ng-src="media/images/{{ developer.cover }}">
+          </ul>
+      </ion-item>
+      
+      <!-- INPUT:DEVELOPER NAME -->
+      <!-- <label class="item item-input">
+        <span class="input-label">Developer Name</span>
+        <input type="text">
+      </label> -->
+
+      <!-- INPUT:PROJECT NAME -->
+      <!-- <label class="item item-input">
+        <span class="input-label">Project Name</span>
+        <input type="text">
+      </label> -->
+      
+      <!-- INPUT:CONTACT PHONE -->
+      <!-- <label class="item item-input">
+        <span class="input-label">Contact Phone</span>
+        <input type="number">
+      </label> -->
+
+      <!-- INPUT:CONTACT EMAIL -->
+      <!-- <label class="item item-input">
+        <span class="input-label">Contact Email</span>
+        <input type="email">
+      </label>
+       -->
+      <!-- TOGGLE:PROJECT DEADLINE --><!-- 
+      <ion-toggle>Project Deadline</ion-toggle>
+      <button class="button button-assertive">Add Project</button> -->
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,44 @@
+<!--
+  This template loads for the 'tab.companies' state (app.js)
+-->
+<ion-view title="Companies">
+  <ion-content has-header="true" has-tabs="true">
+    <div class="list list-inset">
+      
+      <a class="item item-avatar" href="#">
+        <img ng-src="rocketu1.jpg">
+        <h2>RocketU</h2>
+        <p>Bootcamp located in the financial district of San Francisco.  Course is based aroudn 
+          Python/Django with additional focus on Javascript frameworks</p>
+      </a>
+      
+      <!-- INPUT:COMPANY NAME -->
+      <label class="item item-input">
+        <span class="input-label">Company Name</span>
+        <input type="text">
+      </label>
+
+      <!-- INPUT:PROJECT NAME -->
+      <label class="item item-input">
+        <span class="input-label">Project Name</span>
+        <input type="text">
+      </label>
+      
+      <!-- INPUT:CONTACT PHONE -->
+      <label class="item item-input">
+        <span class="input-label">Contact Phone</span>
+        <input type="number">
+      </label>
+
+      <!-- INPUT:CONTACT EMAIL -->
+      <label class="item item-input">
+        <span class="input-label">Contact Email</span>
+        <input type="email">
+      </label>
+      
+      <!-- TOGGLE:PROJECT DEADLINE -->
+      <ion-toggle>Project Deadline</ion-toggle>
+      <button class="button button-assertive">Add Project</button>
+    </div>
+  </ion-content>
+</ion-view>
