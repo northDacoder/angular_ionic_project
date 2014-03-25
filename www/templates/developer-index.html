@@ -6,6 +6,10 @@
             <ion-item ng-repeat="developer in developers" type="item-text-wrap" href="#/tab/developers/{{developer.id}}">
                 <h3>{{developer.name}}</h3>
                 <p>{{developer.city}}, {{developer.state}}</p>
+                <p>Age {{ developer.age }}</p>
+                <a href="mailto:{{ developer.email }}">Email</a>
+                <a href="tel:+1{{ developer.phone }}">Call</a>
+                
             </ion-item>
       
         </ion-list>
