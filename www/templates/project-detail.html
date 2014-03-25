@@ -1,17 +1,24 @@
 <ion-view title="project.project_name">
   	
   	<ion-content has-header="true" padding="true">
-  	    <h1>{{ project.developer }}</h1>
+  	    
+  	    <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/projects"> All Projects</a></p>
 
-  		<p>{{ project.created }}</p>
-    	<p>{{ project.description }}</p>
-    	<p>{{ project.company_project }}</p>
-    	<p>{{ project.project_screenshot }}</p>
-    	<p>{{ project.description }}</p>
-    	<p>{{ project.completed }}</p>
-    	<p>{{ developer.user }}</p>
+  	    <ion-list>
 
-    	<p><a class="button button-small icon ion-arrow-left-b" href="#/tab/projects"> All Projects</a></p>
+            <ion-item ng-repeat="project in projects" type="item-text-wrap" href="#/tab/project/{{project.id}}">
+                <li><h1>{{ project.developer }}</h1></li>
+  				<li><p>{{ project.created }}</p></li>
+    			<li><p>{{ project.description }}</p></li>
+    			<li><p>{{ project.company_project }}</p></li>
+    			<li><p>{{ project.project_screenshot }}</p></li>
+    			<li><p>{{ project.description }}</p></li>
+    			<li><p>{{ project.completed }}</p></li>
+            </ion-item>
+      
+        </ion-list>
+
+  	   
   	</ion-content>
 
 </ion-view>
