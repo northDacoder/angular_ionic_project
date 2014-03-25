@@ -6,14 +6,14 @@
     <div class="list list-inset">
       
       <ion-item ng-repeat="developer in developers" type="item-text-wrap" >
-          <img ng-src="media/images/developer_screenshots/{{ developer.screenshot }}">
+          <!--<img ng-src="media/{{ developer.screenshot }}">-->
           <ul>
               <li>{{ developer.name }}</li>
               <li>{{ developer.city }}, {{ developer.state }}</li>
               <li>{{ developer.description }}</li>
               <button class="button button-success"><a href="mailto:{{ developer.email }}">Email</a></button>
               <button class="button button-danger"><a href="{{ developer.github }}"></a></button>
-              <img ng-src="media/images/{{ developer.cover }}">
+              <!--<img ng-src="media/{{ developer.cover }}">-->
           </ul>
       </ion-item>
       
