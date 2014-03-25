@@ -1,4 +1,4 @@
-<ion-view title="project.project_name">
+<ion-view title="project.title">
   	
   	<ion-content has-header="true" padding="true">
   	    
@@ -6,7 +6,7 @@
 
   	    <ion-list>
 
-            <ion-item ng-repeat="project in projects" type="item-text-wrap" href="#/tab/project/{{project.id}}">
+            <ion-item ng-repeat="project in projects">
                 <li><h1>{{ project.developer }}</h1></li>
   				<li><p>{{ project.created }}</p></li>
     			<li><p>{{ project.description }}</p></li>
