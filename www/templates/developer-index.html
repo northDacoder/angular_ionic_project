@@ -1,0 +1,14 @@
+<ion-view title="Developer List">
+    <ion-content has-header="true" has-tabs="true">
+
+        <ion-list>
+
+            <ion-item ng-repeat="developer in developers" type="item-text-wrap" href="#/tab/developers/{{developer.id}}">
+                <h3>{{developer.name}}</h3>
+                <p>{{developer.city}}, {{developer.state}}</p>
+            </ion-item>
+      
+        </ion-list>
+
+    </ion-content>
+</ion-view>
