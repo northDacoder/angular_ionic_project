@@ -39,11 +39,22 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       }
     })
 
-    .state('tab.companies', {
+    .state('tab.company-index', {
       url: '/companies',
       views: {
         'companies-tab': {
-          templateUrl: 'templates/companies.html'
+          templateUrl: 'templates/company-index.html',
+          controller: 'CompaniesCtrl'
+        }
+      }
+    })
+
+    .state('tab.company-detail', {
+      url: '/companies/:companyId',
+      views: {
+        'company-tab': {
+          templateUrl: 'templates/company-detail.html',
+          controller: 'CompaniesCtrl'
         }
       }
     })
@@ -59,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     .state('tab.developer-detail', {
-      url: '/developer/:developerId',
+      url: '/developers/:developerId',
       views: {
         'developer-tab': {
           templateUrl: 'templates/developer-detail.html',

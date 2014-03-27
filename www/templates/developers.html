@@ -11,39 +11,23 @@
               <li>{{ developer.name }}</li>
               <li>{{ developer.city }}, {{ developer.state }}</li>
               <li>{{ developer.description }}</li>
+              
               <button class="button button-success"><a href="mailto:{{ developer.email }}">Email</a></button>
               <button class="button button-danger"><a href="{{ developer.github }}"></a></button>
-              <!--<img ng-src="media/{{ developer.cover }}">-->
+              <!--<img ng-src="{{ developer.cover }}">-->
+          </ul>
+          <ul>
+              <li>{{ project.project_name }}</li
+              <img ng-src="{{ project.project_screenshot }}">
+              <li>{{ project.description }}</li>
+              <li>{{ project.company }}</li>
+              <li>{{ project.created }}</li>
+              <li>{{ project.language }}</li>
+              <li>{{ project.language }}</li>
           </ul>
       </ion-item>
       
-      <!-- INPUT:DEVELOPER NAME -->
-      <!-- <label class="item item-input">
-        <span class="input-label">Developer Name</span>
-        <input type="text">
-      </label> -->
-
-      <!-- INPUT:PROJECT NAME -->
-      <!-- <label class="item item-input">
-        <span class="input-label">Project Name</span>
-        <input type="text">
-      </label> -->
-      
-      <!-- INPUT:CONTACT PHONE -->
-      <!-- <label class="item item-input">
-        <span class="input-label">Contact Phone</span>
-        <input type="number">
-      </label> -->
-
-      <!-- INPUT:CONTACT EMAIL -->
-      <!-- <label class="item item-input">
-        <span class="input-label">Contact Email</span>
-        <input type="email">
-      </label>
-       -->
-      <!-- TOGGLE:PROJECT DEADLINE --><!-- 
-      <ion-toggle>Project Deadline</ion-toggle>
-      <button class="button button-assertive">Add Project</button> -->
+   
     </div>
   </ion-content>
 </ion-view>
