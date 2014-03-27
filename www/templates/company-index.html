@@ -3,15 +3,20 @@
 
         <ion-list>
 
-            <ion-item ng-repeat="company in companies" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
+            <ion-item ng-repeat="company in companies" type="item-text-wrap" href="#/tab/company/{{company.id}}">
                 <h3>{{company.name}}</h3>
                 <p>{{company.city}}, {{company.state}}</p>
-                <p>Age {{ company.age }}</p>
                 <a href="mailto:{{ company.email }}">Email</a>
                 <a href="tel:+1{{ company.phone }}">Call</a>
+                <p>{{ company.description }}</p>
                 
             </ion-item>
       
+        </ion-list>
+
+        <ion-list>
+            <ion-item ng-repeat="project in company.projects" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
+
         </ion-list>
 
     </ion-content>
