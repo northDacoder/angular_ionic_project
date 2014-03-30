@@ -6,14 +6,15 @@
     <div class="list list-inset">
       
       <ion-item ng-repeat="company in companies" type="item-text-wrap" >
-          <!--<img ng-src="media/{{ company.screenshot }}">-->
+          <img src="{{ company.screenshot }}">
           <ul>
               <li>{{ company.name }}</li>
               <li>{{ company.city }}, {{ company.state }}</li>
               <li>{{ company.description }}</li>
-              <button class="button button-success"><a href="mailto:{{ company.email }}">Email</a></button>
-              <button class="button button-danger"><a href="{{ developer.github }}"></a></button>
-              <img ng-src="media/{{ company.cover }}" width="200px" height="200px">
+              <a href="tel:+1{{ company.phone }}"><i class="icon ion-ios7-telephone"></i>Call</a>
+              <a href="mailto:{{ company.email }}">Email</a>
+              <a href="{{ developer.github }}"></a>
+              <img src="{{ company.cover }}">
           </ul>
       </ion-item>
     

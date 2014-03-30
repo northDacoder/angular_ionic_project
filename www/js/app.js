@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     .state('tab.company-detail', {
-      url: '/companies/:companyId',
+      url: '/company/:companyId',
       views: {
         'company-tab': {
           templateUrl: 'templates/company-detail.html',
@@ -70,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     .state('tab.developer-detail', {
-      url: '/developers/:developerId',
+      url: '/developer/:developerId',
       views: {
         'developer-tab': {
           templateUrl: 'templates/developer-detail.html',

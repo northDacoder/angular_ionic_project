@@ -1,22 +1,38 @@
 <ion-view title="Company List">
     <ion-content has-header="true" has-tabs="true">
-
         <ion-list>
-
             <ion-item ng-repeat="company in companies" type="item-text-wrap" href="#/tab/company/{{company.id}}">
                 <h3>{{company.name}}</h3>
                 <p>{{company.city}}, {{company.state}}</p>
+                <a href="tel:+1{{ company.phone }}"><i class="icon ion-ios7-telephone"></i>Call</a>
                 <a href="mailto:{{ company.email }}">Email</a>
-                <a href="tel:+1{{ company.phone }}">Call</a>
-                <p>{{ company.description }}</p>
-                
+                <a href="{{ developer.github }}"></a>
+                <img src="{{ company.cover }}">
+
+                    <ion-list>
+
+                        <ion-item ng-repeat="project in company.projects" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
+                    
+                            <h3>Project Name: {{ project.project_name }}</h3>
+                            <p>Date Created: {{ project.created }}</p>
+                            <p>Company: {{ project.company }}</p>
+                            <p>Language: {{ project.language }}</p>
+
+                            <h1>Description</h1>
+                            <p>{{ project.description }}</p>
+
+                            <h1>Accepted</h1>
+                            <p>{{ project.accepted_project }}</p>
+
+                            <img src="{{ project.project_screenshot }}">
+                            <p>Completed: {{ project.complated }}</p>
+
+                        <ion-item>
+
+                    </ion-list>
+
             </ion-item>
       
-        </ion-list>
-
-        <ion-list>
-            <ion-item ng-repeat="project in company.projects" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
-
         </ion-list>
 
     </ion-content>
