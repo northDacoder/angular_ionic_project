@@ -10,6 +10,29 @@
                 <a href="mailto:{{ developer.email }}">Email</a>
                 <a href="tel:+1{{ developer.phone }}">Call</a>
                 <a href="{{ developer.github }}"><i class="fa fa-github"></i> Github</a>
+
+                <ion-list>
+
+                        <ion-item ng-repeat="project in company.projects" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
+                    
+                            <h3>Project Name: {{ project.project_name }}</h3>
+                            <p>Date Created: {{ project.created }}</p>
+                            <p>Company: {{ project.company }}</p>
+                            <p>Language: {{ project.language }}</p>
+
+                            <h1>Description</h1>
+                            <p>{{ project.description }}</p>
+
+                            <h1>Accepted</h1>
+                            <p>{{ project.accepted_project }}</p>
+
+                            <img src="{{ project.project_screenshot }}">
+                            <p>Completed: {{ project.complated }}</p>
+
+                        <ion-item>
+
+                    </ion-list>
+
             </ion-item>
 
         </ion-list>
