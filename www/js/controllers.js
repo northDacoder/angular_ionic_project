@@ -14,14 +14,9 @@ angular.module('starter.controllers', [])
 .controller('CompaniesIndexCtrl', function($scope, $http) {
 	$http.get('http://127.0.0.1:8000/api/v1/company/?format=json').success(function(data){
 		$scope.companies = data.objects;
+		$scope.project = $scope.companies.get($stateParams.projectId);
 	});
 })
-
-// // COMPANIES DETAIL CONTROLLER //
-// .controller('CompaniesDetailCtrl', function($scope, $stateParams, $scope.companies ) {
-// 	$scope.project = $scope.companies.get($stateParams.companyId);
-// })
-
 
 // DEVELOPERS INDEX CONTROLLER // 
 .controller('DevelopersIndexCtrl', function($scope, $http) {
