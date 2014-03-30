@@ -10,7 +10,7 @@
 				
 				<a class="item item-icon-left" href="{{ developer.github }}">
     				<i class="icon ion-social-github"></i> 
-    				My Github
+    				<h4>{{ developer.github }} Github</h4>
   				</a>
 
 
@@ -33,12 +33,11 @@
   				<a class="item item-icon-left" href="#">
     				<i class="icon ion-person-stalker"></i>
     				Friends
-    				<span class="badge badge-assertive">0</span>
+    				<span class="badge badge-assertive">91</span>
   				</a>
 
-                <ion-list>
 
-                        <ion-item ng-repeat="project in company.projects" type="item-text-wrap" href="#/tab/companies/{{company.id}}">
+                <ion-item ng-repeat="project in developer.projects" type="item-text-wrap" href="#/tab/developer/{{developer.id}}">
                     
                             <h3>Project Name: {{ project.project_name }}</h3>
                             <p>Date Created: {{ project.created }}</p>
@@ -54,9 +53,8 @@
                             <img src="{{ project.project_screenshot }}">
                             <p>Completed: {{ project.complated }}</p>
 
-                        <ion-item>
+                 <ion-item>
 
-                    </ion-list>
 
             </ion-item>
 
