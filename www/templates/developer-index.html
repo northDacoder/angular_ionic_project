@@ -4,15 +4,18 @@
         <ion-list>
 
             <ion-item ng-repeat="developer in developers" type="item-text-wrap" href="#/tab/developer/{{developer.id}}">
-                <h1>{{developer.name}}</h1>
-                <h2>{{developer.city}}, {{developer.state}}</h2>
-                <h3>Age {{ developer.age }}</h3>
-                <a href="mailto:{{ developer.email }}"><i class="icon ion-ios7-email"></i></a>
-                <a href="tel:+1{{ developer.phone }}"><i class="icon ion-iphone"></i></a>
-                <a href="{{ developer.github }}" ><i class="icon ion-social-github"></i></a>
+                <h2>{{developer.name}}</h2>
+                <h3><i class="icon ion-ios7-location"></i> {{developer.city}}, {{developer.state}}</h3>
+                <p>Age {{ developer.age }}</p>
+				
+				<a class="item item-icon-left" href="{{ developer.github }}">
+    				<i class="icon ion-social-github"></i> 
+    				My Github
+  				</a>
+
 
                 <a class="item item-icon-left" href="mailto:{{ developer.email }}">
-    				<i class="icon ion-email"></i> 
+    				<i class="icon ion-ios7-email"></i> 
     				Send mail
   				</a>
 
@@ -26,14 +29,7 @@
     				Message
   				</a>
 
-  				<a class="item item-icon-left" href="#">
-    				<i class="icon ion-mic-a"></i>
-    				Record album
-    				<span class="item-note">
-      					Grammy
-    				</span>
-  				</a>
-
+  				
   				<a class="item item-icon-left" href="#">
     				<i class="icon ion-person-stalker"></i>
     				Friends

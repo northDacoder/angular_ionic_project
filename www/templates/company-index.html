@@ -3,7 +3,7 @@
         <ion-list>
             <ion-item ng-repeat="company in companies" type="item-text-wrap" href="#/tab/company/{{company.id}}">
                 <h3>{{company.name}}</h3>
-                <p>{{company.city}}, {{company.state}}</p>
+                <p><i class="icon ion-ios7-location"></i> {{company.city}}, {{company.state}}</p>
                 <a href="tel:+1{{ company.phone }}"><i class="icon ion-ios7-telephone"></i>Call</a>
                 <a href="mailto:{{ company.email }}">Email</a>
                 <a href="{{ developer.github }}"></a>
