@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       views: {
         'companies-tab': {
           templateUrl: 'templates/company-index.html',
-          controller: 'CompaniesCtrl'
+          controller: 'CompaniesIndexCtrl'
         }
       }
     })
@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       views: {
         'company-tab': {
           templateUrl: 'templates/company-detail.html',
-          controller: 'CompaniesCtrl'
+          controller: 'CompaniesDetailCtrl'
         }
       }
     })
@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       views: {
         'developers-tab': {
           templateUrl: 'templates/developer-index.html',
-          controller: 'DevelopersCtrl'
+          controller: 'DevelopersIndexCtrl'
         }
       }
     })
@@ -74,7 +74,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       views: {
         'developer-tab': {
           templateUrl: 'templates/developer-detail.html',
-          controller: 'DevelopersCtrl'
+          controller: 'DevelopersDetailCtrl'
         }
       }
     });
