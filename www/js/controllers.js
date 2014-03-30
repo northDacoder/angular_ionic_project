@@ -17,10 +17,10 @@ angular.module('starter.controllers', [])
 	});
 })
 
-// COMPANIES DETAIL CONTROLLER //
-.controller('CompaniesDetailCtrl', function($scope, $stateParams, $scope.companies ) {
-	$scope.project = $scope.companies.get($stateParams.companyId);
-})
+// // COMPANIES DETAIL CONTROLLER //
+// .controller('CompaniesDetailCtrl', function($scope, $stateParams, $scope.companies ) {
+// 	$scope.project = $scope.companies.get($stateParams.companyId);
+// })
 
 
 // DEVELOPERS INDEX CONTROLLER // 
@@ -30,10 +30,10 @@ angular.module('starter.controllers', [])
 	});
 })
 
-// DEVELOPERS DETAIL CONTROLLER // 
-.controller('DevelopersDetailCtrl', function($scope, $stateParams, $scope.developers) {
-	$scope.project = ProjectService.get($stateParams.developerId);
-});
+// // DEVELOPERS DETAIL CONTROLLER // 
+// .controller('DevelopersDetailCtrl', function($scope, $stateParams, $scope.developers) {
+// 	$scope.project = ProjectService.get($stateParams.developerId);
+// });
 
 // DEVELOPER PROJECTS CONTROLLER // 
 // .controller('DeveloperProjectsCtrl', function($scope, $http) {

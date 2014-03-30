@@ -25,3 +25,17 @@ angular.module('starter.services', [])
   }
 });
 
+// .factory('DeveloperService', function() {
+
+//   $http.get('http://127.0.0.1:8000/api/v1/company/?format=json').success(function(data){
+//     $scope.companies = data.objects;
+
+//     return: function() {
+//       return developers
+//     },
+//     get: function(developerId) {
+//       return developers[developersId];
+//     }
+//   });
+// });
+
