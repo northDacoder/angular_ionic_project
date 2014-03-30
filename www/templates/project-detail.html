@@ -1,17 +1,12 @@
-<ion-view title="rocketlaunchit">
-  	
+<ion-view title="{{ project.title }}">
+ 
   	<ion-content has-header="true" padding="true">
-  	    
-  	    <a class="button button-small icon ion-arrow-left-b" href="#/tab/projects"> All Projects</a>
 
+  		<a class="button button-outline button-positive icon ion-arrow-left-b" href="#/tab/projects"> All Projects</a>
+ 
   	    <ion-list>
-            <li>{{ project.developer }}</li>
-  			<li>{{ project.created }}</li>
-    		<li>{{ project.description }}</li>
-    		<li>{{ project.company_project }}</li>
-    		<li>{{ project.project_screenshot }}</li>
-    		<li>{{ project.description }}</li>
-    		<li>{{ project.completed }}</li>
+            <h1>{{ project.title }}</h1>
+    		<p>{{ project.description }}</p>
         </ion-list>
   	   
   	</ion-content>

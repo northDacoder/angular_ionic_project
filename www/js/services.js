@@ -15,6 +15,8 @@ angular.module('starter.services', [])
     { id: 7, title: 'ParkME', description: 'Distrupting the taxi industry to help people who travel a lot.' }
   ];
 
+
+
   return {
     all: function() {
       return projects;

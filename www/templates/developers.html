@@ -15,17 +15,18 @@
               <button class="button button-success"><a href="mailto:{{ developer.email }}">Email</a></button>
               <button class="button button-danger"><a href="{{ developer.github }}"></a></button>
               <!--<img ng-src="{{ developer.cover }}">-->
-          </ul>
+         
 
-          <ion-item ng-repeat="project in developer.projects"  type="item-text-wrap" >
-              <li>{{ project.project_name }}</li
-              <img ng-src="{{ project.project_screenshot }}">
-              <li>{{ project.description }}</li>
-              <li>{{ project.company }}</li>
-              <li>{{ project.created }}</li>
-              <li>{{ project.language }}</li>
-              <li>{{ project.language }}</li>
-          </ion-item>
+              <ion-item ng-repeat="project in developer.projects"  type="item-text-wrap" >
+                  <li>{{ project.project_name }}</li
+                  <img ng-src="{{ project.project_screenshot }}">
+                  <li>{{ project.description }}</li>
+                  <li>{{ project.company }}</li>
+                  <li>{{ project.created }}</li>
+                  <li>{{ project.language }}</li>
+                  <li>{{ project.language }}</li>
+              </ion-item>
+          </ul>
       </ion-item>
       
    
