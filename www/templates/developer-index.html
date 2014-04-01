@@ -4,9 +4,30 @@
         <ion-list>
 
             <ion-item ng-repeat="developer in developers" type="item-text-wrap" href="#/tab/developer/{{developer.id}}">
+				
+				<div class="list card">
+					<div class="item item-avatar">
+    					<img src="{{ developer.screenshot }}">
+    						<h2>{{ developer.name }} </h2>
+    						<p>{{ developer.city }}, {{ developer.state }}</p>
+  					</div>
+
+  					<div class="item item-body">
+    					<img class="full-image" src="img/uberbg.jpg">
+    					<p>{{ developer.description }} </p>
+    					<p>
+      						<a href="#" class="subdued">Age {{ developer.age }}</a>
+      						<a href="#" class="subdued">Languages {{ developer.language }}</a>
+    					</p>
+  					</div>
+
                 <h2>{{developer.name}}</h2>
-                <h3><i class="icon ion-ios7-location"></i> {{developer.city}}, {{developer.state}}</h3>
+                <h3><i class="icon ion-ios7-location"></i>{{developer.city}}, {{developer.state}}</h3>
                 <p>Age {{ developer.age }}</p>
+                <img ng-src="img/uberbg.jpg" height="100px" width="100%">
+                <img ng-src="{{ developer.screenshot }}" height="100px" width="100%">
+				<!--<img src="{{ developer.screenshot }}" height="100px" width="100%">-->
+                <!--<p>Completed: {{ project.completed }}</p>-->
 				
 				<a class="item item-icon-left" href="{{ developer.github }}">
     				<i class="icon ion-social-github"></i> 
@@ -50,8 +71,8 @@
                             <h1>Accepted</h1>
                             <p>{{ project.accepted_project }}</p>
 
-                            <img src="{{ project.project_screenshot }}">
-                            <p>Completed: {{ project.complated }}</p>
+                            <img src="../../media/images/developer_screenshots/{{ project.project_screenshot }}">
+                            <p>Completed: {{ project.completed }}</p>
 
                  <ion-item>
 
