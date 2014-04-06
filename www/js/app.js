@@ -39,21 +39,42 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       }
     })
 
-    .state('tab.companies', {
+    .state('tab.company-index', {
       url: '/companies',
       views: {
         'companies-tab': {
-          templateUrl: 'templates/companies.html'
+          templateUrl: 'templates/company-index.html',
+          controller: 'CompanyIndexCtrl'
         }
       }
     })
 
-    .state('tab.developers', {
+    .state('tab.company-detail', {
+      url: '/company/:companyId',
+      views: {
+        'companies-tab': {
+          templateUrl: 'templates/company-detail.html',
+          controller: 'CompanyDetailCtrl'
+        }
+      }
+    })
+    
+    .state('tab.developer-index', {
       url: '/developers',
       views: {
         'developers-tab': {
-          templateUrl: 'templates/developers.html',
-          controller: 'DevelopersCtrl'
+          templateUrl: 'templates/developer-index.html',
+          controller: 'DeveloperIndexCtrl'
+        }
+      }
+    })
+
+    .state('tab.developer-detail', {
+      url: '/developer/:developerId',
+      views: {
+        'developers-tab': {
+          templateUrl: 'templates/developer-detail.html',
+          controller: 'DeveloperDetailCtrl'
         }
       }
     });

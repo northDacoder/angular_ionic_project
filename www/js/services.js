@@ -16,7 +16,6 @@ angular.module('starter.services', [])
   ];
 
 
-
   return {
     all: function() {
       return projects;

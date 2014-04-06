@@ -10,38 +10,28 @@ angular.module('starter.controllers', [])
 	$scope.project = ProjectService.get($stateParams.projectId);
 })
 
-// DEVELOPERS (ALL) CONTROLLER // 
-.controller('DevelopersCtrl', function($scope, $http) {
-
-	$http.get('http://127.0.0.1:8000/api/v1/developer/?format=json').success(function(data){
-		$scope.developers = data.objects;
-	});
-
-});
-
-// DEVELOPER PROJECTS CONTROLLER // 
-.controller('DeveloperProjectsCtrl', function($scope, $http) {
-
-	$http.get('http://127.0.0.1:8000/api/v1/developerproject/?format=json').success(function(data){
-		$scope.developerprojects = data.objects;
-	});
-
-});
-
-// COMPANIES (ALL) CONTROLLER // 
-.controller('CompaniesCtrl', function($scope, $http) {
-
+// COMPANIES INDEX CONTROLLER //
+.controller('CompanyIndexCtrl', function($scope, $http) {
 	$http.get('http://127.0.0.1:8000/api/v1/company/?format=json').success(function(data){
 		$scope.companies = data.objects;
 	});
+})
 
-});
-
-// COMPANY PROJECTS CONTROLLER // 
-.controller('CompaniesProjectsCtrl', function($scope, $http) {
-
-	$http.get('http://127.0.0.1:8000/api/v1/companyproject/?format=json').success(function(data){
-		$scope.companyprojects = data.objects;
+.controller('CompanyDetailCtrl', function($scope, $http) {
+	$http.get('http://127.0.0.1:8000/api/v1/company/?format=json').success(function(data){
+		$scope.companies = data.objects;
 	});
+})
 
+// DEVELOPERS INDEX CONTROLLER // 
+.controller('DeveloperIndexCtrl', function($scope, $http) {
+	$http.get('http://127.0.0.1:8000/api/v1/developer/?format=json').success(function(data){
+		$scope.developers = data.objects;
+	});
+})
+
+.controller('DeveloperDetailCtrl', function($scope, $http) {
+	$http.get('http://127.0.0.1:8000/api/v1/developer/?format=json').success(function(data){
+		$scope.developers = data.objects;
+	});
 });
