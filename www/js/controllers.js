@@ -34,4 +34,9 @@ angular.module('starter.controllers', [])
 	$http.get('http://127.0.0.1:8000/api/v1/developer/?format=json').success(function(data){
 		$scope.developers = data.objects;
 	});
+})
+
+// CHAT CONTROLLER // 
+.controller('ChatCtrl', function($scope, $firebase) {
+
 });

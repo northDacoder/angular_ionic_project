@@ -77,6 +77,16 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
           controller: 'DeveloperDetailCtrl'
         }
       }
+    })
+
+    .state('tab.chat', {
+      url: '/chat',
+      views: {
+        'chat-tab': {
+          templateUrl: 'templates/chat.html',
+          controller: 'ChatCtrl'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/tab/projects');
